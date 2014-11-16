@@ -35,11 +35,13 @@
 	}
 
 	main {
-		padding-top: 86px;
+		padding-top: 25vh;
 		section {
-			padding: 5% 10%;
+			padding: 0 10%;
+			height: 75vh;
 		}
 	}
+
 	#home {
 		text-align: left;
 		h1 {
@@ -52,6 +54,21 @@
 			vertical-align: top;
 			float: right;
 			padding: 0;
+		}
+	}
+	#story {
+		padding: 0;
+		height: 75vh;
+		max-height: 75vh;
+		#story-slider {
+				max-height: auto;
+				height: auto;
+			.story-1 {
+				max-height: 75vh;
+				height: 75vh;
+				margin: auto;
+				min-width: 840px;
+			}	
 		}
 	}
 }

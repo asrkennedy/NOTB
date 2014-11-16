@@ -1863,6 +1863,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Brandon Grotesque Bold";
   src: url(fonts/Brandon_bld.otf);
 }
+header {
+  min-height: 25vh;
+}
+
 #logo {
   float: left;
   width: 50%;
@@ -1930,10 +1934,6 @@ ul#social_links a img {
   color: #C0C0C0;
 }
 
-main section {
-  height: 100%;
-}
-
 #home {
   text-align: center;
 }
@@ -1943,6 +1943,17 @@ main section {
 }
 #home .character {
   padding: 2em;
+}
+
+#story {
+  background: #000;
+  max-height: 100vh;
+  height: 100vh;
+}
+#story #story-slider {
+  text-align: center;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -1970,10 +1981,11 @@ main section {
   }
 
   main {
-    padding-top: 86px;
+    padding-top: 25vh;
   }
   main section {
-    padding: 5% 10%;
+    padding: 0 10%;
+    height: 75vh;
   }
 
   #home {
@@ -1989,6 +2001,22 @@ main section {
     vertical-align: top;
     float: right;
     padding: 0;
+  }
+
+  #story {
+    padding: 0;
+    height: 75vh;
+    max-height: 75vh;
+  }
+  #story #story-slider {
+    max-height: auto;
+    height: auto;
+  }
+  #story #story-slider .story-1 {
+    max-height: 75vh;
+    height: 75vh;
+    margin: auto;
+    min-width: 840px;
   }
 }
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {

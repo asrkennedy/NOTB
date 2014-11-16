@@ -983,6 +983,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Brandon Grotesque Bold";
   src: url(fonts/Brandon_bld.otf);
 }
+header {
+  min-height: 25vh;
+}
+
 #logo {
   float: left;
   width: 50%;
@@ -1050,10 +1054,6 @@ ul#social_links a img {
   color: #C0C0C0;
 }
 
-main section {
-  height: 100%;
-}
-
 #home {
   text-align: center;
 }
@@ -1063,4 +1063,15 @@ main section {
 }
 #home .character {
   padding: 2em;
+}
+
+#story {
+  background: #000;
+  max-height: 100vh;
+  height: 100vh;
+}
+#story #story-slider {
+  text-align: center;
+  height: 100vh;
+  max-height: 100vh;
 }

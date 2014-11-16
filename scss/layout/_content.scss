@@ -1,11 +1,3 @@
-main {
-	section {
-	  height: 100%;
-	}
-}
-
-
-
 // ********
 // **HOME**
 // ********
@@ -20,3 +12,19 @@ main {
 		padding: $base-padding;
 	}
 }
+
+// *********
+// **STORY**
+// *********
+
+#story {
+	background: $black;
+	max-height: 100vh;
+	height: 100vh;
+	#story-slider {
+		text-align: center;
+		height: 100vh;
+		max-height: 100vh;
+	}
+}
+
