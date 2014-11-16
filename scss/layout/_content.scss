@@ -1,0 +1,22 @@
+main {
+	section {
+	  height: 100%;
+	}
+}
+
+
+
+// ********
+// **HOME**
+// ********
+
+#home {
+	text-align: center;
+	h1 {
+		min-width: 370px;
+		font-size: $main-header-font-size;
+	}
+	.character {
+		padding: $base-padding;
+	}
+}

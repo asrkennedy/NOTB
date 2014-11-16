@@ -1,0 +1,58 @@
+#logo {
+  float: left;
+  width: $half-width;
+}
+
+nav {
+  ul#primary_nav {
+    text-align: center;
+    @include lists;
+    width: 100%;
+    margin: 2em;
+    li {
+      display: inline-block;
+      a,
+      #mobile-menu {
+        text-decoration: none;
+        color: $light-grey;
+        padding: $base-padding;
+        font-size: 1em;
+        display: inline-block;
+        @include transition(all, 0.3s);
+        &:hover,
+        &:focus {
+          color: $black; 
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: $black;
+}
+
+ul#social_links {
+  @include lists;
+  @include absolute;
+  right: 0;
+  left: auto;
+  width: auto;
+  margin-top: 2em;
+  li {
+    display: inline-block;
+  }
+  a img {
+    max-width: 30px;
+ }
+}
+
+#mobile-menu {
+  display: none;
+  float: right;
+  width: $half-width;
+  font-size: 400%;
+  padding: 20px 0;
+  text-align: center;
+  color: $light-grey;
+}

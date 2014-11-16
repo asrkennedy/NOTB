@@ -1,0 +1,77 @@
+@import "foundation";
+@import "main";
+
+//iphone
+@media #{$small-only} {
+
+} 
+
+@media #{$small-up} {
+  
+}
+
+@media #{$medium-up} { 
+	header {
+		position: fixed;
+		width: $full-width;
+		background: $white;
+		#logo {
+		  width: 10%;
+		  min-width: 120px;
+		  margin: 0.5*($base-margin);
+		  @include absolute;
+		}
+		nav {
+			min-width: 720px;
+		}
+		#social_links {
+			li {
+				padding: 0 0.5*($base-padding) 0 0;
+			}
+			a img {
+				max-width: 20px;
+			}
+		}
+	}
+
+	main {
+		padding-top: 86px;
+		section {
+			padding: 5% 10%;
+		}
+	}
+	#home {
+		text-align: left;
+		h1 {
+			display: inline;
+			min-width: 600px;
+		}
+		.character {
+			max-width: 150px;
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+			padding: 0;
+		}
+	}
+}
+
+@media #{$large-only} {
+	#home h1 {
+		font-size: 7em;
+	}
+	header {
+		#logo {
+			margin: $base-margin;
+		}
+		#social_links {
+			li {
+				padding: $base-padding 0.5*($base-padding) 0 0;
+			}
+			a img {
+				max-width: 30px;
+			}
+		}
+	}
+
+}
