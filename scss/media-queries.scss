@@ -3,6 +3,9 @@
 
 //iphone
 @media #{$small-only} {
+	body {
+		font-size: 12px;
+	}
 
 } 
 
@@ -11,10 +14,12 @@
 }
 
 @media #{$medium-up} { 
+	body {
+		font-size: 16px;
+	}
 	header {
-		position: fixed;
+		// position: fixed;
 		width: $full-width;
-		background: $white;
 		#logo {
 		  width: 10%;
 		  min-width: 120px;
@@ -24,7 +29,7 @@
 		nav {
 			min-width: 720px;
 		}
-		#social_links {
+		#social-links {
 			li {
 				padding: 0 0.5*($base-padding) 0 0;
 			}
@@ -35,10 +40,11 @@
 	}
 
 	main {
-		padding-top: 25vh;
 		section {
 			padding: 0 10%;
+			// padding-top: 25vh;
 			height: 75vh;
+			width: 100vw;
 		}
 	}
 
@@ -56,21 +62,22 @@
 			padding: 0;
 		}
 	}
+
 	#story {
 		padding: 0;
 		height: 75vh;
 		max-height: 75vh;
+		width: 100vw;
 		#story-slider {
 				max-height: auto;
 				height: auto;
 			.story-1 {
 				max-height: 75vh;
 				height: 75vh;
-				margin: auto;
-				min-width: 840px;
 			}	
 		}
 	}
+
 }
 
 @media #{$large-only} {
@@ -81,13 +88,21 @@
 		#logo {
 			margin: $base-margin;
 		}
-		#social_links {
+		#social-links {
 			li {
 				padding: $base-padding 0.5*($base-padding) 0 0;
 			}
 			a img {
 				max-width: 30px;
 			}
+		}
+	}
+	#about-slider {
+		width: 100vw;
+		height: 75vh;
+		max-height: 75vh;
+		h2 {
+			width: 50vw;
 		}
 	}
 

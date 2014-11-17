@@ -1,3 +1,11 @@
+main {
+	z-index: -1;
+}
+
+section {
+	overflow: hidden;
+}
+
 // ********
 // **HOME**
 // ********
@@ -19,12 +27,63 @@
 
 #story {
 	background: $black;
-	max-height: 100vh;
-	height: 100vh;
+	max-height: 75vh;
+	height: 75vh;
+	position: relative;
 	#story-slider {
 		text-align: center;
-		height: 100vh;
-		max-height: 100vh;
+		height: 75vh;
+		max-height: 75vh;
+		.story-1 {
+			background: url(../img/story/Holdingimage.png);
+			@include background-image;
+		}
 	}
 }
 
+// *********
+// **ABOUT**
+// *********
+
+#about {
+	@include absolute;
+	// height: 0 !important;
+	// top: 100% !important;
+	// z-index: -100;
+	// float: left;
+}	
+
+#about-slider {
+	// display: none;
+	background-color: rgba(255, 0, 0, 0.4);
+	@include absolute;
+	height: 75vh;
+}
+h2 {
+	font-size: $subheader-font-size;
+	margin: 0 10vw;
+	color: $white;
+}
+.about-slides {
+	display: none;
+}
+#about-slide-1 {
+	display: block;
+}
+
+
+// *********
+// **WORK**
+// *********
+
+#work {
+	background-color: pink;
+}
+
+// ***********
+// **CONTACT**
+// ***********
+
+#contact {
+	background-color: yellow;
+}
