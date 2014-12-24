@@ -1083,8 +1083,8 @@ section {
 }
 #story #story-slider {
   text-align: center;
-  height: 100vh;
-  max-height: 100vh;
+  height: 75vh;
+  max-height: 75vh;
 }
 #story #story-slider .story-1 {
   background: url(../img/story/Holdingimage.png);
@@ -1127,6 +1127,46 @@ h2 {
 
 #work {
   background-color: pink;
+  padding: 0;
+}
+#work img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#work .owl-pagination {
+  position: absolute;
+  top: 0;
+  background: #d50d0d;
+  margin: 10px;
+  padding: 30px 15px 10px;
+}
+#work .owl-pagination:after, #work .owl-pagination:before {
+  top: 100%;
+  left: 70%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+#work .owl-pagination:after {
+  border-color: rgba(213, 13, 13, 0);
+  border-top-color: #d50d0d;
+  border-width: 11px 7px;
+  margin-left: -8px;
+}
+#work .owl-pagination:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-width: 16px;
+  margin-left: -16px;
+}
+#work .owl-theme .owl-controls .owl-page span {
+  background: transparent;
+  border: white solid 2px;
+  width: 6px;
+  height: 6px;
 }
 
 #contact {

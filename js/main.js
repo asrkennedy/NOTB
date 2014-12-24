@@ -106,6 +106,20 @@ $(document).ready(function(){
     checkTablet();
   });
 
+  // Work slider
+  $("#work-slider").owlCarousel({
+ 
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+  });
+
+  $('.owl-pagination').on('click', function(){
+    console.log('kitty')
+  })
+ 
+
   mobileMenu();
   checkTablet();
   
