@@ -115,20 +115,17 @@ $(document).ready(function(){
     checkTablet();
   });
 
-  // Work slider
-  $("#work-slider").owlCarousel({
-      navigation : false,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
-  });
+  // // Work slider
+  // $("#work-slider").owlCarousel({
+  //     navigation : false,
+  //     slideSpeed : 300,
+  //     paginationSpeed : 400,
+  //     singleItem:true,
+  //     autoplay: true
+  // });
 
-  $('.owl-pagination').on('click', function(){
-    console.log('kitty')
-  })
-
-  $('.owl-page').on('hover', function(){
-    alert('hovering')
+  $('span').on('click', function(){
+    alert('kitty')
   });
 
   mobileMenu();
