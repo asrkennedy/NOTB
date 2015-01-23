@@ -1087,6 +1087,17 @@ section {
   max-height: 75vh;
 }
 #story #story-slider .story-1 {
+  background-color: #000;
+}
+
+video {
+  height: 75vh;
+}
+
+#about {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: url(../img/story/Holdingimage.png);
   background-position: center center;
   background-size: cover;
@@ -1097,18 +1108,13 @@ section {
   height: 100%;
 }
 
-#about {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 #about-slider {
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
   height: 75vh;
+  padding-top: 10vh;
 }
 
 h2 {
@@ -1126,20 +1132,31 @@ h2 {
 }
 
 #work {
-  background-color: pink;
   padding: 0;
+}
+#work #work-slider {
+  height: 75vh;
 }
 #work img {
   display: block;
   width: 100%;
   height: auto;
 }
+#work .owl-carousel .owl-wrapper-outer {
+  z-index: -2;
+}
 #work .owl-pagination {
   position: absolute;
-  top: 0;
+  top: auto;
+  bottom: 2vh;
+  left: 15vw;
   background: #d50d0d;
   margin: 10px;
   padding: 30px 15px 10px;
+  z-index: 100002;
+  min-width: 120px;
+  width: 15vw;
+  height: 15vh;
 }
 #work .owl-pagination:after, #work .owl-pagination:before {
   top: 100%;
@@ -1167,6 +1184,46 @@ h2 {
   border: white solid 2px;
   width: 6px;
   height: 6px;
+}
+
+#work-slide-1 {
+  background-image: url("../img/work/shambala_bg.jpg");
+  height: 75vh;
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.owl-controls {
+  -webkit-user-select: all;
+}
+
+.owl-wrapper:before,
+.owl-wrapper:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.owl-wrapper:after {
+  clear: both;
+}
+
+.owl-item {
+  height: 75vh;
+}
+
+.work-footer {
+  background-color: #FFF;
+  height: 5vh;
+  bottom: 0;
+  position: absolute;
+  width: 100vw;
 }
 
 #contact {

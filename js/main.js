@@ -10,7 +10,7 @@ function animateScroll(clickedLink){
 
 function slider(whichSlides){
   var current = whichSlides.first();
-  current.show();
+  current.fadeIn('fast');
   var next = current.next();
   timer = setInterval(function(){
       $(next).fadeIn();
@@ -68,6 +68,10 @@ function hideAbout(){
   clearTimeout(timer);
 }
 
+function resetVideo() {
+      $('video')[0].src = 'img/story/UX_Web.mp4#t=0'
+}
+
 $(document).ready(function(){
 
   //Onepage-scroll settings
@@ -79,9 +83,14 @@ $(document).ready(function(){
      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
      updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
      beforeMove: function(index) {
+
       if (index == 3) {
         hideAbout();
         slider(aboutSlides);
+      }
+      // reset the video when you see it
+      if (index == 2) {
+        resetVideo();
       }
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
@@ -108,7 +117,6 @@ $(document).ready(function(){
 
   // Work slider
   $("#work-slider").owlCarousel({
- 
       navigation : false,
       slideSpeed : 300,
       paginationSpeed : 400,
@@ -118,7 +126,10 @@ $(document).ready(function(){
   $('.owl-pagination').on('click', function(){
     console.log('kitty')
   })
- 
+
+  $('.owl-page').on('hover', function(){
+    alert('hovering')
+  });
 
   mobileMenu();
   checkTablet();
