@@ -44,6 +44,7 @@ section {
 
 video {
 	height: 75vh;
+	width: 100%;
 }
 
 // *********
@@ -87,14 +88,18 @@ h2 {
 #work {
 	// background-color: pink;
 	padding: 0;
+	#work-slider {
+		height: 75vh;
+	}
 	img {
 		display: block;
 	    width: 100%;
 	    height: auto;
 	}
-}
-
-.pagination {
+	.owl-carousel .owl-wrapper-outer {
+		z-index: -2;
+	}
+	.owl-pagination {
 		position: absolute;
 		top: auto;
 		bottom: 2vh;
@@ -106,9 +111,8 @@ h2 {
 		min-width: 120px;
 		width: 15vw;
 		height: 15vh;
-		text-align: center;
 	}
-	.pagination:after, .pagination:before {
+	.owl-pagination:after, .owl-pagination:before {
 		top: 100%;
 		left: 70%;
 		border: solid transparent;
@@ -119,54 +123,45 @@ h2 {
 		pointer-events: none;
 	}
 
-	.pagination:after {
+	.owl-pagination:after {
 		border-color: rgba(213, 13, 13, 0);
 		border-top-color: #d50d0d;
 		border-width: 11px 7px;
 		margin-left: -8px;
 	}
-	.pagination:before {
+	.owl-pagination:before {
 		border-color: rgba(255, 255, 255, 0);
 		border-width: 16px;
 		margin-left: -16px;
 	}
-	.pagination span {
-		background: white;
+	.owl-theme .owl-controls .owl-page span {
+		background: transparent;
 		border: white solid 2px;
-		width: 16px;
-		height: 16px;
-		border-radius: 20px;
-		display: block;
-		opacity: 1;
-		margin: 5px 7px;
-		cursor: pointer;
+		width: 6px;
+		height: 6px;
 	}
-
-.work-page {
-	display: inline-block;
-}
-
-
-#work-slider {
-  overflow: hidden;
-  height: 75vh;
-  width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-}
-
-.item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
 }
 
 #work-slide-1 {
 	background-image: url('../img/work/shambala_bg.jpg');
 	height: 75vh;
 	@include background-image;
+}
+
+.owl-wrapper:before,
+.owl-wrapper:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.owl-wrapper:after {
+  clear: both;
+}
+
+.owl-item {
+	height: 75vh;
 }
 
 .work-footer {
@@ -181,6 +176,20 @@ h2 {
 // **CONTACT**
 // ***********
 
-#contact {
-	background-color: yellow;
+// #contact {
+// 	background-color: yellow;
+// }
+
+.contact-icons {
+	float: left;
+	text-align: center;
+	padding: 1em;
+	img {
+		width: 50%
+	}
+}
+
+h4 {
+	font-weight: bold;
+	margin: $base-margin 0;
 }

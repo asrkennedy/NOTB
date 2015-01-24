@@ -27,7 +27,16 @@
 		  @include absolute;
 		}
 		nav {
-			min-width: 720px;
+			min-width: 850px;
+			ul#primary-nav {
+				margin-top: 0;
+				li {
+					display: inline-block;
+					a {
+						font-size: 1em;
+					}
+				}
+			}
 		}
 		#social-links {
 			li {
@@ -80,6 +89,10 @@
 
 	#about-slider {
 		padding: 10vh;
+	}
+
+	.contact-icons img {
+		width: 80%;
 	}
 
 }
