@@ -3,6 +3,7 @@ var aboutSlides = $('#about-slider').children();
 var storySlides = [];
 var workItems = [];
 var timer;
+var navLinks = ['Home','About','Story','Work','Contact']
 
 function animateScroll(clickedLink){
   var target = $(clickedLink).data('target');
@@ -131,8 +132,12 @@ $(document).ready(function(){
      responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
                                       // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                                       // the browser's width is less than 600, the fallback will kick in.
-     direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+     direction: "vertical",           // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".              
   });
+
+   $("#scroll").click(function(){
+      $(".main").jumpTo($(this).data("target"));
+     });
 
   // Animate Scroll
   $( '#primary-nav li a' ).on('click', function(e) {
@@ -218,6 +223,11 @@ $(document).ready(function(){
     },
     type: 'image' // this is a default type
   });
+
+  
+  $('.onepage-pagination li a').each(function(i, e){
+      $(e).append(navLinks[i]);
+  })
 
   mobileMenu();
   checkTablet();
