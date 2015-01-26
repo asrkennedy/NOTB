@@ -985,8 +985,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 header {
   min-height: 25vh;
-  z-index: 1;
+  position: absolute;
   background: #FFF;
+  z-index: 1;
 }
 
 #logo {
@@ -1056,7 +1057,7 @@ ul#social-links a img {
 }
 
 main {
-  z-index: -1;
+  margin-top: 25vh;
 }
 
 section {
