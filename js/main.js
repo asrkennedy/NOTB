@@ -1,6 +1,7 @@
 var aboveTablet = window.matchMedia("only screen and (min-width: 641px)");
 var aboutSlides = $('#about-slider').children();
 var storySlides = [];
+var workItems = [];
 var timer;
 
 
@@ -83,6 +84,25 @@ function resetVideo() {
       $('video')[0].src = 'img/story/UX_Web.mp4#t=0'
 }
 
+function showWorkName() {
+  $.each($('.item'), function(i, e) {
+     workItems.push('<p class="work-name">'+$(e).data('name')+'</p>');
+  });
+  $('.owl-page').each(function(i, e){
+    $(workItems).each(function(id, el){
+      if (i == id) {
+        if ($(e).hasClass('active')) {
+          $('.owl-pagination').prepend(el);
+        } 
+      }
+    })
+  })
+}
+
+function clearPagination() {
+  $('.work-name').remove();
+}
+
 $(document).ready(function(){
 
   //Onepage-scroll settings
@@ -134,13 +154,29 @@ $(document).ready(function(){
       singleItem:true,
       autoplay: true
   });
+  
+  // Opening work-detail
+  $('.owl-item').on('click', function(){
+    $('.work-detail').slideDown();
+    $('.owl-pagination').fadeOut('fast');
+    $('.close-window').fadeIn();
+  })
+
+  // Closing work-detail
+  $('.close-window').on('click', function(e){
+    e.stopPropagation();
+    $('.work-detail').slideUp();
+    $('.owl-pagination').fadeIn('fast');
+    $('.close-window').fadeOut();
+  })
 
   $('.owl-pagination').on('click', function(){
-    console.log('kitty')
-  });
+    clearPagination();
+    showWorkName();
+  })
 
   mobileMenu();
   checkTablet();
-  // delayOwlControls();
+  showWorkName();
   
 })
