@@ -4,16 +4,6 @@ var storySlides = [];
 var workItems = [];
 var timer;
 
-// function delayOwlControls() {
-//   window.setTimeout(owlMovement, 300);
-// }
-
-// function owlMovement() {
-//   owlControls = $('.owl-controls')[0];
-//   $('.owl-controls').remove()
-//   $('header').append(owlControls);
-// }
-
 function animateScroll(clickedLink){
   var target = $(clickedLink).data('target');
   $('main').moveTo(target);
@@ -84,14 +74,14 @@ function resetVideo() {
 }
 
 function showWorkName() {
-  $.each($('.item'), function(i, e) {
+  $.each($('#work .item'), function(i, e) {
      workItems.push('<p class="work-name">'+$(e).data('name')+'</p>');
   });
-  $('.owl-page').each(function(i, e){
+  $('#work .owl-page').each(function(i, e){
     $(workItems).each(function(id, el){
       if (i == id) {
         if ($(e).hasClass('active')) {
-          $('.owl-pagination').prepend(el);
+          $('#work .owl-pagination').prepend(el);
         } 
       }
     })
@@ -113,17 +103,28 @@ $(document).ready(function(){
      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
      updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
      beforeMove: function(index) {
-
-      if (index == 3) {
-        hideAbout();
-        slider(aboutSlides);
-      }
       // reset the video when you see it
       if (index == 2) {
+        $("#about-slider").trigger('owl.play', 4000)
+      }
+
+      if (index == 3) {
         resetVideo();
+      }
+
+      if (index == 4) {
+        $("#work-slider").trigger('owl.play', 4000)
       }
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
+
+      if (index != 2) {
+        $("#about-slider").trigger('owl.stop', 4000)
+      }
+
+      if (index != 4) {
+        $("#work-slider").trigger('owl.stop', 4000)
+      }
      },   // This option accepts a callback function. The function will be called after the page moves.
      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
      keyboard: true,                  // You can activate the keyboard controls
@@ -145,17 +146,28 @@ $(document).ready(function(){
     checkTablet();
   });
 
-  // Work slider
-  $("#work-slider").owlCarousel({
-      navigation : false,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true,
-      autoplay: true
+  // About slider
+  $("#about-slider").owlCarousel({
+      items: $('.about-slides').length,
+      singleItem: true,
+      loop: false,
+      autoplay: 2000,
+      autoplayTimeout:1000,
+      autoplayHoverPause:true
   });
-  
+
+ // Work slider
+  $("#work-slider").owlCarousel({
+      items: $('.work-slides').length,
+      singleItem: true,
+      loop: false,
+      autoplay: 2000,
+      autoplayTimeout:1000,
+      autoplayHoverPause:true
+  });
+
   // Opening work-detail
-  $('.owl-item').on('click', function(){
+  $('#work .owl-item').on('click', function(){
     $('.work-detail').slideDown();
     $('.owl-pagination').fadeOut('fast');
     $('.close-window').fadeIn();
@@ -165,11 +177,11 @@ $(document).ready(function(){
   $('.close-window').on('click', function(e){
     e.stopPropagation();
     $('.work-detail').slideUp();
-    $('.owl-pagination').fadeIn('fast');
+    $('#work .owl-pagination').fadeIn('fast');
     $('.close-window').fadeOut();
   })
 
-  $('.owl-pagination').on('click', function(){
+  $('#work .owl-pagination').on('click', function(){
     clearPagination();
     showWorkName();
   })

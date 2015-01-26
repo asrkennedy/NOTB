@@ -2,6 +2,28 @@ main {
 	margin-top: 25vh;
 }
 
+.onepage-pagination li a::before,
+.onepage-pagination li a.active::before,
+.owl-theme .owl-controls .owl-page span {
+	background: transparent;
+	border: white solid 2px;
+	width: 8px !important;
+	height: 8px !important;
+	opacity: 0.5;
+}
+
+.owl-theme .owl-controls .owl-page.active span {
+	background: #FFF;
+	opacity: 1;
+}
+
+.onepage-pagination li a.active::before {
+	background: #FFF;
+	left: auto;
+	margin-top: 0;
+	opacity: 1;
+}
+
 section {
 	overflow: hidden;
 }
@@ -73,11 +95,22 @@ h2 {
 	margin: 0 10vw;
 	color: $white;
 }
-.about-slides {
-	display: none;
+
+#about .owl-pagination {
+	width: 90vw;
+	position: absolute;
+	bottom: 0;
 }
+
 #about-slide-1 {
 	display: block;
+}
+#about-slide-4 h2:last-of-type {
+	margin-top: $base-margin;
+	a {
+		color: $white;
+		text-decoration: none;
+	}
 }
 
 
@@ -131,12 +164,6 @@ h2 {
 		border-width: 16px;
 		margin-left: -16px;
 	}
-	.owl-theme .owl-controls .owl-page span {
-		background: transparent;
-		border: white solid 2px;
-		width: 6px;
-		height: 6px;
-	}
 }
 
 #work-slide-1 .background-wrapper,
@@ -174,7 +201,7 @@ h2 {
   clear: both;
 }
 
-.owl-item {
+#work .owl-item {
 	height: 75vh;
 	cursor: pointer;
 	text-align: center;
@@ -311,9 +338,9 @@ h2 {
 // **CONTACT**
 // ***********
 
-// #contact {
-// 	background-color: yellow;
-// }
+#contact {
+	padding-top: 15vh;
+}
 
 .contact-icons {
 	float: left;

@@ -1060,6 +1060,28 @@ main {
   margin-top: 25vh;
 }
 
+.onepage-pagination li a::before,
+.onepage-pagination li a.active::before,
+.owl-theme .owl-controls .owl-page span {
+  background: transparent;
+  border: white solid 2px;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 0.5;
+}
+
+.owl-theme .owl-controls .owl-page.active span {
+  background: #FFF;
+  opacity: 1;
+}
+
+.onepage-pagination li a.active::before {
+  background: #FFF;
+  left: auto;
+  margin-top: 0;
+  opacity: 1;
+}
+
 section {
   overflow: hidden;
 }
@@ -1124,12 +1146,22 @@ h2 {
   color: #FFF;
 }
 
-.about-slides {
-  display: none;
+#about .owl-pagination {
+  width: 90vw;
+  position: absolute;
+  bottom: 0;
 }
 
 #about-slide-1 {
   display: block;
+}
+
+#about-slide-4 h2:last-of-type {
+  margin-top: 2em;
+}
+#about-slide-4 h2:last-of-type a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 #work {
@@ -1177,12 +1209,6 @@ h2 {
   border-width: 16px;
   margin-left: -16px;
 }
-#work .owl-theme .owl-controls .owl-page span {
-  background: transparent;
-  border: white solid 2px;
-  width: 6px;
-  height: 6px;
-}
 
 #work-slide-1 .background-wrapper,
 #work-slide-2 .background-wrapper,
@@ -1224,29 +1250,29 @@ h2 {
   clear: both;
 }
 
-.owl-item {
+#work .owl-item {
   height: 75vh;
   cursor: pointer;
   text-align: center;
 }
-.owl-item .work-slides {
+#work .owl-item .work-slides {
   display: table;
 }
-.owl-item .background-wrapper {
+#work .owl-item .background-wrapper {
   -webkit-transition: all 1000ms linear;
   -moz-transition: all 1000ms linear;
   -ms-transition: all 1000ms linear;
   -o-transition: all 1000ms linear;
   transition: all 1000ms linear;
 }
-.owl-item .background-wrapper:hover {
+#work .owl-item .background-wrapper:hover {
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
-.owl-item .tagline {
+#work .owl-item .tagline {
   -moz-opacity: 0;
   opacity: 0;
   color: #FFF;
@@ -1263,7 +1289,7 @@ h2 {
   transition: all 1000ms linear;
   letter-spacing: 5px;
 }
-.owl-item .tagline:hover {
+#work .owl-item .tagline:hover {
   -moz-opacity: 1;
   opacity: 1;
 }
@@ -1357,6 +1383,10 @@ h2 {
   margin-top: 1em;
   font-size: 1.125em;
   cursor: pointer;
+}
+
+#contact {
+  padding-top: 15vh;
 }
 
 .contact-icons {
