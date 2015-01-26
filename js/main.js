@@ -4,7 +4,6 @@ var storySlides = [];
 var workItems = [];
 var timer;
 
-
 // function delayOwlControls() {
 //   window.setTimeout(owlMovement, 300);
 // }
@@ -174,6 +173,39 @@ $(document).ready(function(){
     clearPagination();
     showWorkName();
   })
+
+  // Work Gallery popup modal
+  $('#shambala-gallery').magnificPopup({
+    items: shambalaItems,
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is a default type
+  });
+
+  $('#paperarts-gallery').magnificPopup({
+    items: paperItems,
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is a default type
+  });
+
+  $('#fashionrev-gallery').magnificPopup({
+    items: fashionItems,
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is a default type
+  });
+
+   $('#riskterrain-gallery').magnificPopup({
+    items: riskItems,
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is a default type
+  });
 
   mobileMenu();
   checkTablet();

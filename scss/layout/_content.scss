@@ -250,7 +250,7 @@ h2 {
 	}
 	h4 {
 		font-size: $base-font-size;
-		margin: 0;
+		margin: 1em 0 0 0;
 	}
 	hr {
 		border: 0;
@@ -261,12 +261,14 @@ h2 {
 .work-detail .left-info,
 .work-detail .right-info {
 	float: left;
-	width: 50vw;
-	padding: $base-padding;
+	width: 90vw;
+	padding: 0 $base-padding;
 }
 
 .work-detail .right-info {
 	float: right;
+	// padding: 0 2em 0 0;
+	display: none;
 }
 
 .close-window {
@@ -284,6 +286,27 @@ h2 {
 	color: #FFF;
 }
 
+#open-popup {padding:20px}
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 40px;
+  width: auto;
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.gallery-button {
+	background-color: red;
+	color: #FFF;
+	border: 0;
+	padding: $base-padding;
+	margin-top: 0.5*$base-margin;
+	font-size: $base-font-size;
+	cursor: pointer;
+}
+
 // ***********
 // **CONTACT**
 // ***********
@@ -298,6 +321,10 @@ h2 {
 	padding: 1em;
 	img {
 		width: 50%
+	}
+	a {
+		color: #000;
+		text-decoration: none;
 	}
 }
 

@@ -6,6 +6,9 @@
 	body {
 		font-size: 12px;
 	}
+	.work-detail {
+		padding-top: 15vh;
+	}
 
 } 
 
@@ -94,6 +97,9 @@
 	.contact-icons img {
 		width: 80%;
 	}
+	.work-detail .left-info {
+		width: 70vw;
+	}
 
 }
 
@@ -121,6 +127,11 @@
 		h2 {
 			width: 50vw;
 		}
+	}
+	.work-detail .left-info,
+	.work-detail .right-info  {
+		width: 50vw;
+		display: block;
 	}
 
 }

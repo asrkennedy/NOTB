@@ -2181,7 +2181,7 @@ h2 {
 }
 .work-detail h4 {
   font-size: 1.125em;
-  margin: 0;
+  margin: 1em 0 0 0;
 }
 .work-detail hr {
   border: 0;
@@ -2191,12 +2191,13 @@ h2 {
 .work-detail .left-info,
 .work-detail .right-info {
   float: left;
-  width: 50vw;
-  padding: 2em;
+  width: 90vw;
+  padding: 0 2em;
 }
 
 .work-detail .right-info {
   float: right;
+  display: none;
 }
 
 .close-window {
@@ -2214,6 +2215,30 @@ h2 {
   color: #FFF;
 }
 
+#open-popup {
+  padding: 20px;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 40px;
+  width: auto;
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.gallery-button {
+  background-color: red;
+  color: #FFF;
+  border: 0;
+  padding: 2em;
+  margin-top: 1em;
+  font-size: 1.125em;
+  cursor: pointer;
+}
+
 .contact-icons {
   float: left;
   text-align: center;
@@ -2221,6 +2246,10 @@ h2 {
 }
 .contact-icons img {
   width: 50%;
+}
+.contact-icons a {
+  color: #000;
+  text-decoration: none;
 }
 
 h4 {
@@ -2231,6 +2260,10 @@ h4 {
 @media only screen and (max-width: 40em) {
   body {
     font-size: 12px;
+  }
+
+  .work-detail {
+    padding-top: 15vh;
   }
 }
 @media only screen and (min-width: 40.063em) {
@@ -2311,6 +2344,10 @@ h4 {
   .contact-icons img {
     width: 80%;
   }
+
+  .work-detail .left-info {
+    width: 70vw;
+  }
 }
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   #home h1 {
@@ -2334,5 +2371,11 @@ h4 {
   }
   #about-slider h2 {
     width: 50vw;
+  }
+
+  .work-detail .left-info,
+  .work-detail .right-info {
+    width: 50vw;
+    display: block;
   }
 }

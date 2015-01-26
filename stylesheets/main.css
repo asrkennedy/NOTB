@@ -1301,7 +1301,7 @@ h2 {
 }
 .work-detail h4 {
   font-size: 1.125em;
-  margin: 0;
+  margin: 1em 0 0 0;
 }
 .work-detail hr {
   border: 0;
@@ -1311,12 +1311,13 @@ h2 {
 .work-detail .left-info,
 .work-detail .right-info {
   float: left;
-  width: 50vw;
-  padding: 2em;
+  width: 90vw;
+  padding: 0 2em;
 }
 
 .work-detail .right-info {
   float: right;
+  display: none;
 }
 
 .close-window {
@@ -1334,6 +1335,30 @@ h2 {
   color: #FFF;
 }
 
+#open-popup {
+  padding: 20px;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 40px;
+  width: auto;
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.gallery-button {
+  background-color: red;
+  color: #FFF;
+  border: 0;
+  padding: 2em;
+  margin-top: 1em;
+  font-size: 1.125em;
+  cursor: pointer;
+}
+
 .contact-icons {
   float: left;
   text-align: center;
@@ -1341,6 +1366,10 @@ h2 {
 }
 .contact-icons img {
   width: 50%;
+}
+.contact-icons a {
+  color: #000;
+  text-decoration: none;
 }
 
 h4 {
